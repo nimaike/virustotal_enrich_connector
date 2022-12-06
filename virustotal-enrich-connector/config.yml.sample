@@ -1,0 +1,15 @@
+opencti:
+  url: 'http://opencti:8080'
+  token: 'CHANGEME'
+
+connector:
+  id: 'CHANGEME'
+  type: 'INTERNAL_ENRICHMENT'
+  name: 'virustotal_enrichment_connector'
+  scope: 'StixFile'
+  auto: true
+  confidence_level: 100 # From 0 (Unknown) to 100 (Fully trusted)
+  log_level: 'info'
+
+virustotal:
+  token: "ChangeMe"

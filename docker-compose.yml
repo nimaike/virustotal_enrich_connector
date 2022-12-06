@@ -1,0 +1,16 @@
+version: '3'
+services:
+  virustotal-enrich-connector:
+    image: virustotal-enrich-connector:5.4.1
+    environment:
+      - OPENCTI_URL=http://opencti:8080
+      - OPENCTI_TOKEN=CHANGEME
+      - CONNECTOR_ID=CHANGEME
+      - CONNECTOR_TYPE=INTERNAL_ENRICHMENT
+      - CONNECTOR_NAME=virustotal_enrichment_connector
+      - CONNECTOR_SCOPE=StixFile
+      - CONNECTOR_AUTO=True
+      - CONNECTOR_CONFIDENCE_LEVEL=100 # From 0 (Unknown) to 100 (Fully trusted)
+      - CONNECTOR_LOG_LEVEL=info
+      - VIRUSTOTAL_TOKEN=CHANGEME
+    restart: always
